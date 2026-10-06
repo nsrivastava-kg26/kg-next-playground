@@ -10,7 +10,7 @@ a CMS outage takes the site down.
 - [ ] Every function in `src/lib/cms/queries.ts` has `"use cache"`, `cacheLife(...)` and `cacheTag(...)`.
 - [ ] A named `cacheLife` profile (`content`) is defined in `next.config.ts`. No magic numbers.
 - [ ] Tags come from `src/lib/cms/tags.ts`.
-- [ ] `src/app/api/plans` and `src/app/api/posts` are deleted; pages call queries directly.
+- [ ] `src/app/api/plans`, `api/posts` and `api/content` are deleted, along with the `useContent` hook; components call queries directly.
 - [ ] `/blog` reads `searchParams` inside `<Suspense>`; the heading stays in the static shell.
 - [ ] CMS JSON is validated with Zod in `src/lib/cms/client.ts`.
 - [ ] `npm run build` shows `/` and `/blog` as ◐ (Partial Prerender) and `/pricing` as ○.

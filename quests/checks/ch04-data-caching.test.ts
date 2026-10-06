@@ -29,6 +29,7 @@ describe("Ch04 · Data fetching, caching & streaming", () => {
   it("removes the client-side data API the agency built", () => {
     expect(exists("src/app/api/plans/route.ts")).toBe(false);
     expect(exists("src/app/api/posts/route.ts")).toBe(false);
+    expect(exists("src/app/api/content/route.ts")).toBe(false);
   });
 
   it("streams runtime data (searchParams, cookies) behind <Suspense>", () => {
