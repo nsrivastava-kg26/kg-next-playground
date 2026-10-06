@@ -1,3 +1,6 @@
+> **You are on `quest/start`**: the inherited PixelRush codebase. Start with [quests/README.md](./quests/README.md).
+> Run `npm run quest` to see what is failing.
+
 # Lumen · the Next.js Golden Standard
 
 A production-grade marketing site for **Lumen**, a fictional AI observability company. It exists to

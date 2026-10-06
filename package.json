@@ -6,15 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --max-warnings=0",
-    "typecheck": "next typegen && tsc --noEmit",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "quest": "vitest run --config quests/vitest.config.mts",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run quest"
+    "lint": "eslint",
+    "quest": "vitest run --config quests/vitest.config.mts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
