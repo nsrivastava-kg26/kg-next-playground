@@ -1,0 +1,32 @@
+export const metadata = {
+  title: "Evals belong in CI, not in a notebook",
+  description: "Prompt changes are code changes. Here is how we gate merges on quality the same way we gate them on tests.",
+  date: "2026-09-02",
+  author: "Lumen Engineering",
+  tags: ["evals", "engineering"],
+};
+
+A prompt tweak that improves one answer can quietly break fifty others. Teams that review prompt
+changes by eyeballing a few outputs are flying blind.
+
+## Treat prompts like code
+
+If a change can alter behaviour in production, it deserves the same pipeline as code:
+
+- A **golden dataset** of real inputs with expected properties.
+- **Scorers** that check those properties automatically.
+- A **threshold** that fails the build when quality drops.
+
+## What a good scorer checks
+
+Exact-match is rarely useful for generative output. Score properties instead: did the answer cite a
+source, stay under a length budget, avoid PII, call the right tool?
+
+```ts
+expect(await score(run, [citesSource, noPII, maxTokens(400)])).toBeGreaterThan(0.95);
+```
+
+> A failing eval should feel exactly like a failing unit test: annoying, obvious and cheap to fix.
+
+Start with twenty examples. Grow the dataset every time a bug reaches a customer. Read
+[the pricing page](/pricing) to see which plans include CI evals.

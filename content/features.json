@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tracing",
+    "icon": "activity",
+    "title": "End-to-end tracing",
+    "body": "Follow a request from the first prompt through every tool call, retrieval and model response, with latency and cost on each span."
+  },
+  {
+    "id": "evals",
+    "icon": "flask",
+    "title": "Evals in CI",
+    "body": "Run golden datasets on every pull request and block merges when quality regresses, just like unit tests."
+  },
+  {
+    "id": "cost",
+    "icon": "coins",
+    "title": "Cost controls",
+    "body": "See spend per feature, per customer and per model. Set budgets that alert before the invoice does."
+  },
+  {
+    "id": "guardrails",
+    "icon": "shield",
+    "title": "Guardrails",
+    "body": "Detect PII, prompt injection and policy violations in real time, with redaction before data leaves your VPC."
+  },
+  {
+    "id": "replay",
+    "icon": "rewind",
+    "title": "Session replay",
+    "body": "Replay any conversation with the exact prompts, context and model version that produced it."
+  },
+  {
+    "id": "sdk",
+    "icon": "code",
+    "title": "Two-line SDK",
+    "body": "OpenTelemetry-native SDKs for TypeScript and Python. Instrument once, export anywhere."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "t1",
+    "quote": "We cut our p95 latency in half the week we turned Lumen on. The trace view made the slow tool call obvious.",
+    "name": "Priya N.",
+    "role": "Staff Engineer",
+    "company": "Northwind (sample)"
+  },
+  {
+    "id": "t2",
+    "quote": "Evals in CI changed how we review prompt changes. Regressions now fail the build instead of reaching customers.",
+    "name": "Marco D.",
+    "role": "Head of AI",
+    "company": "Contoso (sample)"
+  },
+  {
+    "id": "t3",
+    "quote": "Finance finally understands our model spend, per feature, without a spreadsheet.",
+    "name": "Aiko T.",
+    "role": "VP Engineering",
+    "company": "Fabrikam (sample)"
+  }
+]

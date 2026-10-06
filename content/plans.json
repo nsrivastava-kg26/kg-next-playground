@@ -1,0 +1,46 @@
+[
+  {
+    "id": "hobby",
+    "name": "Hobby",
+    "description": "For side projects and prototypes.",
+    "priceMonthly": 0,
+    "priceAnnual": 0,
+    "cta": "Start free",
+    "highlighted": false,
+    "features": ["50k traces / month", "7-day retention", "1 project", "Community support"]
+  },
+  {
+    "id": "team",
+    "name": "Team",
+    "description": "For product teams shipping AI to production.",
+    "priceMonthly": 49,
+    "priceAnnual": 39,
+    "cta": "Start 14-day trial",
+    "highlighted": true,
+    "features": [
+      "2M traces / month",
+      "30-day retention",
+      "Unlimited projects",
+      "Evals & regression alerts",
+      "Slack alerts",
+      "Email support"
+    ]
+  },
+  {
+    "id": "enterprise",
+    "name": "Enterprise",
+    "description": "For organisations with security and scale needs.",
+    "priceMonthly": null,
+    "priceAnnual": null,
+    "cta": "Talk to sales",
+    "highlighted": false,
+    "features": [
+      "Unlimited traces",
+      "Custom retention",
+      "SSO & SCIM",
+      "Self-hosted option",
+      "99.95% SLA",
+      "Dedicated engineer"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "f1",
+    "question": "Does Lumen store my prompts?",
+    "answer": "Only if you want it to. Redaction rules run in the SDK, so sensitive fields can be dropped before anything leaves your infrastructure."
+  },
+  {
+    "id": "f2",
+    "question": "Which models and frameworks are supported?",
+    "answer": "Any provider. Lumen is OpenTelemetry-native, with first-class integrations for the popular TypeScript and Python AI SDKs."
+  },
+  {
+    "id": "f3",
+    "question": "Can I self-host?",
+    "answer": "Yes. The Enterprise plan includes a self-hosted deployment with the same features as the cloud product."
+  },
+  {
+    "id": "f4",
+    "question": "What counts as a trace?",
+    "answer": "One end-to-end request through your AI feature, including all of its nested spans. Nested spans are free."
+  }
+]

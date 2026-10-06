@@ -1,0 +1,20 @@
+# deps
+/node_modules
+# next
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+# env
+.env*
+!.env.example
+# tests
+/coverage
+/playwright-report
+/test-results
+/blob-report
+# misc
+.DS_Store
+*.pem
+npm-debug.log*

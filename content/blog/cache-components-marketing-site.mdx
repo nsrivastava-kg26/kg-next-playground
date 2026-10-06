@@ -1,0 +1,30 @@
+export const metadata = {
+  title: "How our marketing site serves a static shell and still personalises",
+  description: "Partial prerendering with Cache Components let us keep a CDN-fast page while running A/B tests on the server.",
+  date: "2026-09-20",
+  author: "Lumen Web Team",
+  tags: ["nextjs", "performance"],
+};
+
+Marketing pages need to be fast for everyone and slightly different for some people. Those goals used
+to fight each other: reading a cookie made the whole page dynamic.
+
+## The static shell
+
+With Cache Components enabled, everything that does not depend on the request is prerendered: copy,
+pricing from the CMS (cached with `"use cache"`), images. Only the pieces that read cookies are left as
+holes, each wrapped in `<Suspense>`.
+
+## Personalisation without the penalty
+
+Our hero call-to-action is an experiment. A proxy assigns a bucket cookie before rendering, and a tiny
+Server Component reads it inside a Suspense boundary. The rest of the page never waits for it.
+
+```tsx
+<Suspense fallback={<CtaFallback />}>
+  <ExperimentCta />
+</Suspense>
+```
+
+The fallback has exactly the same dimensions as the real button, so streaming it in causes no layout
+shift. The result: a CDN-served page, a server-side experiment, and no flicker.

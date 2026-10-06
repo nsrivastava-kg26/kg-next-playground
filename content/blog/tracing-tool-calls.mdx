@@ -1,0 +1,32 @@
+export const metadata = {
+  title: "Tracing tool calls with OpenTelemetry",
+  description: "Agents spend most of their time in tools, not models. Make those spans first-class.",
+  date: "2026-08-12",
+  author: "Lumen Engineering",
+  tags: ["tracing", "engineering"],
+};
+
+When an agent feels slow, the model is usually not the culprit. A retrieval query, a third-party
+API or a retry loop in a tool call is.
+
+## One span per tool call
+
+Wrap each tool in its own span and attach the attributes you will want during an incident:
+
+```ts
+await tracer.startActiveSpan("tool.search_orders", async (span) => {
+  span.setAttribute("tool.input_size", query.length);
+  const result = await searchOrders(query);
+  span.setAttribute("tool.result_count", result.length);
+  span.end();
+  return result;
+});
+```
+
+## Attributes worth recording
+
+- Input and output size, not raw payloads (keep PII out of traces).
+- Retry count and the final status.
+- The model and prompt version that decided to call the tool.
+
+With those three, most "why was this slow?" questions answer themselves in the waterfall view.
